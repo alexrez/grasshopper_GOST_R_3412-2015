@@ -14,18 +14,25 @@ grasshopper.py:
   -t          compare encryption/decrypt result with given files
 
 запуск тестов и проверка соответствия 'plaintext' и 'ciphertext' тому как работает программа на зашифрование и дешифрование:
+
 grasshopper.py -t -k tests/1block/test_0/key -i tests/1block/test_0/plaintext -o tests/1block/test_0/ciphertext
 
 запуск программы на зашифрование/расшифрование с указанными ключом и входным/выходным файлами:
+
 grasshopper.py -e -k keyfile -i plaintext -o ciphertext
+
 grasshopper.py -d -k keyfile -i ciphertext -o plaintext
 
 запуск программы на зашифрование/расшифрование с указанными ключом и входным/выходным файлами в режиме ofb:
+
 grasshopper.py -e -k keyfile -i plaintext -o ciphertext  -mode ofb
+
 grasshopper.py -d -k keyfile -i ciphertext -o plaintext  -mode ofb
 
 проверка тестов ГОСТ 3412-2015:
+
 test_gost.py
 
 проверка тестов ГОСТ 3413-2015 для режима гаммирования с обратной связью по выходу (ofb):
+
 test_gost_ofb.py
